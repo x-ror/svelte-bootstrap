@@ -1,0 +1,23 @@
+{
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules/*"
+    ],
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "Node",
+        "target": "ESNext",
+        "types": [
+            "node",
+            "svelte"
+        ],
+        "lib": [
+            "ES2016",
+            "DOM"
+        ],
+        "baseUrl": "src"
+    }
+}
