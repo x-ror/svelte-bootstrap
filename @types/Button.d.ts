@@ -25,11 +25,24 @@ declare type Size = | "sm" | "lg"
 
 interface ButtonProps {
     active?: boolean;
-    block?: false;
-    disabled?: false;
+    block?: boolean;
+    disabled?: boolean;
+    /**
+    * One or more button variant combinations
+    *
+    * buttons may be one of a variety of visual variants such as:
+    *
+    * `'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark', 'light', 'link'`
+    *
+    * as well as "outline" versions (prefixed by 'outline-*')
+    *
+    * `'outline-primary', 'outline-secondary', 'outline-success', 'outline-danger', 'outline-warning', 'outline-info', 'outline-dark', 'outline-light'`
+    */
     variant?: Variant;
     size?: Size;
-    type?: "button";
+    href?: string;
+    as?: 'input'
+    type?: "button" | 'submit' | 'reset';
 }
 
 declare class Button extends SvelteComponent<ButtonProps> { }
