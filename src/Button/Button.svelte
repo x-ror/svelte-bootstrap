@@ -1,20 +1,20 @@
 <script>
-    import SafeAnchor from "../SafeAnchor/SafeAnchor.svelte";
+    import SafeAnchor from '../SafeAnchor/SafeAnchor.svelte';
     import {
         getButtonPrefix,
         getSize,
         getVariant,
         getBlock,
-        getActive,
-    } from "./types";
-    export let variant = "primary";
+        getActive
+    } from './types';
+    export let variant = 'primary';
     export let active = false;
     export let block = false;
     export let disabled = false;
-    export let size = "";
-    export let href = "";
-    export let as = "";
-    export let type = "button";
+    export let size = '';
+    export let href = '';
+    export let as = '';
+    export let type = 'button';
 
     const css = [
         getButtonPrefix(),
@@ -22,10 +22,10 @@
         getSize(size),
         getActive(active),
         getBlock(block),
-        $$props.class,
+        $$props.class
     ]
         .filter(Boolean)
-        .join(" ")
+        .join(' ')
         .trim();
 </script>
 

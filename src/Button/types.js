@@ -1,18 +1,18 @@
 const SIZES = {
-    'sm': 'btn-sm',
-    'lg': 'btn-lg'
-}
+    sm: 'btn-sm',
+    lg: 'btn-lg'
+};
 
 const VARIANTS = {
-    'primary': 'btn-primary',
-    'secondary': 'btn-secondary',
-    'success': 'btn-success',
-    'danger': 'btn-danger',
-    'warning': 'btn-warning',
-    'info': 'btn-info',
-    'dark': 'btn-dark',
-    'light': 'btn-light',
-    'link': 'btn-link',
+    primary: 'btn-primary',
+    secondary: 'btn-secondary',
+    success: 'btn-success',
+    danger: 'btn-danger',
+    warning: 'btn-warning',
+    info: 'btn-info',
+    dark: 'btn-dark',
+    light: 'btn-light',
+    link: 'btn-link',
     'outline-primary': 'btn-outline-primary',
     'outline-secondary': 'btn-outline-secondary',
     'outline-success': 'btn-outline-success',
@@ -20,8 +20,8 @@ const VARIANTS = {
     'outline-warning': 'btn-outline-warning',
     'outline-info': 'btn-outline-info',
     'outline-dark': 'btn-outline-dark',
-    'outline-light': 'btn-outline-light',
-}
+    'outline-light': 'btn-outline-light'
+};
 
 /**
  * @returns {string}
@@ -42,14 +42,14 @@ export function getSize(size) {
  * @returns {string}
  */
 export function getBlock(block) {
-    return block ? 'btn-block' : ''
+    return block ? 'btn-block' : '';
 }
 
 /**
  * @returns {string}
  */
 export function getActive(active) {
-    return active ? 'active' : ''
+    return active ? 'active' : '';
 }
 
 /**

@@ -1,13 +1,13 @@
 <script>
-    import { getDisplay } from "./types";
-    export let display = "";
+    import { getDisplay } from './types';
+    export let display = '';
 
     const css = [
         getDisplay(display),
-        $$props.class,
+        $$props.class
     ]
         .filter(Boolean)
-        .join(" ")
+        .join(' ')
         .trim();
 </script>
 <h6 class={css} {...$$restProps}>

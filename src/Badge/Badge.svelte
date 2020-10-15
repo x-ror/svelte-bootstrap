@@ -1,16 +1,16 @@
 <script>
-    import { getBadgePrefix, getVariant, getPill } from "./types";
-    export let variant = "";
-    export let pill = "";
+    import { getBadgePrefix, getVariant, getPill } from './types';
+    export let variant = '';
+    export let pill = '';
 
     const css = [
         getBadgePrefix(),
         getVariant(variant),
         getPill(pill),
-        $$props.class,
+        $$props.class
     ]
         .filter(Boolean)
-        .join(" ")
+        .join(' ')
         .trim();
 </script>
 

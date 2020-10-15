@@ -14,15 +14,15 @@ const plugins = [
 
 const output = (path) => [
     { file: `${path}/index.mjs`, sourcemap: true, format: 'es' },
-    { file: `${path}/index.js`, sourcemap: true, format: 'umd', name },
+    { file: `${path}/index.js`, sourcemap: true, format: 'umd', name }
 ];
 
 export default [{
     input: 'src/index.js',
     output: output('dist'),
-    plugins: [svelte({ hydratable: true, preprocess: autoPreprocess() }), ...plugins],
+    plugins: [svelte({ hydratable: true, preprocess: autoPreprocess() }), ...plugins]
 }, {
     input: 'src/index.js',
     output: output('dist/ssr'),
-    plugins: [svelte({ generate: 'ssr', hydratable: true, preprocess: autoPreprocess() }), ...plugins],
+    plugins: [svelte({ generate: 'ssr', hydratable: true, preprocess: autoPreprocess() }), ...plugins]
 }];

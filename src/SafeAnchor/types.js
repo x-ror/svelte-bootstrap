@@ -1,3 +1,3 @@
 export function getDisabled(disabled) {
-    return disabled ? 'disabled' : ''
+    return disabled ? 'disabled' : '';
 }

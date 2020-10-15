@@ -1,22 +1,22 @@
 <script>
-    import { createEventDispatcher } from "svelte";
-    import { getDisabled } from "./types";
+    import { createEventDispatcher } from 'svelte';
+    import { getDisabled } from './types';
     export let href;
-    export let role = "";
+    export let role = '';
     export let disabled = false;
-    export let tabindex = "";
+    export let tabindex = '';
 
     delete $$restProps.class;
     const dispatch = createEventDispatcher();
-    const click = () => dispatch("click");
+    const click = () => dispatch('click');
 
-    let props = {
+    const props = {
         role,
-        tabindex,
+        tabindex
     };
 
     function isTrivialHref(href) {
-        return !href || href.trim() === "#";
+        return !href || href.trim() === '#';
     }
 
     function handleClick(event) {
@@ -33,27 +33,27 @@
     }
 
     function handleKeyDown(event) {
-        if (event.key === " ") {
+        if (event.key === ' ') {
             event.preventDefault();
             handleClick(event);
         }
     }
 
     if (isTrivialHref(href)) {
-        props.role = props.role || "button";
+        props.role = props.role || 'button';
         // we want to make sure there is a href attribute on the node
         // otherwise, the cursor incorrectly styled (except with role='button')
-        href = href || "#";
+        href = href || '#';
     }
 
     if (disabled) {
-        props["tabindex"] = -1;
-        props["aria-disabled"] = true;
+        props['tabindex'] = -1;
+        props['aria-disabled'] = true;
     }
 
     const css = [$$props.class, getDisabled(disabled)]
         .filter(Boolean)
-        .join(" ")
+        .join(' ')
         .trim();
 </script>
 
