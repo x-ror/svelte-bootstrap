@@ -1,7 +1,7 @@
 <script>
     import { getBadgePrefix, getVariant, getPill } from './types';
-    export let variant = '';
-    export let pill = '';
+    export let variant;
+    export let pill;
 
     const css = [
         getBadgePrefix(),
