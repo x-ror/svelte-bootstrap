@@ -1,7 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json';
-import autoPreprocess from 'svelte-preprocess';
+import { terser } from 'rollup-plugin-terser';
 
 const name = pkg.name
     .replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -9,7 +9,8 @@ const name = pkg.name
     .replace(/-\w/g, (m) => m[1].toUpperCase());
 
 const plugins = [
-    resolve({})
+    resolve({}),
+    terser({})
 ];
 
 const output = (path) => [
@@ -20,9 +21,9 @@ const output = (path) => [
 export default [{
     input: 'src/index.js',
     output: output('dist'),
-    plugins: [svelte({ hydratable: true, preprocess: autoPreprocess() }), ...plugins]
+    plugins: [svelte({ hydratable: true }), ...plugins]
 }, {
     input: 'src/index.js',
     output: output('dist/ssr'),
-    plugins: [svelte({ generate: 'ssr', hydratable: true, preprocess: autoPreprocess() }), ...plugins]
+    plugins: [svelte({ generate: 'ssr', hydratable: true }), ...plugins]
 }];

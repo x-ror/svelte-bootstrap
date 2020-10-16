@@ -3,7 +3,8 @@ module.exports = {
     extends: '@sveltejs',
     plugins: ['import'],
     rules: {
-        quotes: [2, 'single', { avoidEscape: true }]
+        quotes: [2, 'single', { avoidEscape: true }],
+        semi: [2, 'always']
     },
     settings: {
         'import/resolver': {
