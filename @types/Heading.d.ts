@@ -1,9 +1,9 @@
 import { SvelteComponent } from './shared';
 
-type Display = | "display-1" | "display-2" | "display-3" | "display-4" | "display-5" | "display-6"
+type Display = | 'display-1' | 'display-2' | 'display-3' | 'display-4' | 'display-5' | 'display-6';
 
 interface HeadingProps {
-    display?: Display
+    display?: Display;
 }
 
 declare class H1 extends SvelteComponent<HeadingProps> { }
@@ -19,5 +19,5 @@ export {
     H3,
     H4,
     H5,
-    H6,
-} 
+    H6
+}; 
